@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+  
+h1 {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+  #main-content {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+  
+  /* Style for the individual cards */
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(214, 226, 230);
+    border: 2px solid black;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Style for images inside the card */
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Style for card titles */
+  .card h3 {
+    background-color: rgb(15, 15, 15);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Style for card descriptions or any additional text */
+  .card p {
+    text-align: center;
+    padding: 10px;
+    color: #333;
+  }
+  footer {
+    background-color: yellow;
+    color: #333;
+  }
+  
+  /* Style for newsletter */
+  .form-newsletter {
+    border: 2px solid black;
+    padding: 20px;
+    margin: 10px;
+  }
+  .form-suggestion {
+    border: 2px solid black;
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: left;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+  
+  /* Categories List Styles */
+  #categories-list {
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 800px;
+  }
+  
+  #categories-list li {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    color: #007bff;
+    cursor: default;
+  }
+  
+  /* Items List Styles */
+  #items-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px auto;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  #items-list li {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(33% - 20px); /* Three items per row */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  #items-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  #items-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #007bff;
+  }
+  
+  #items-list p {
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  #items-list .price {
+    font-weight: bold;
+    color: #333;
+  }

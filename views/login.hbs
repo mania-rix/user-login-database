@@ -1,0 +1,24 @@
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh; background-color: #ffffff;">
+    <div class="card shadow-lg" style="width: 100%; max-width: 400px; border-radius: 10px;">
+        <div class="card-body">
+            <h2 class="text-center" style="color: #383333; font-weight: bold;">Welcome Back!</h2>
+            <p class="text-center text-muted mb-4">Login to your account</p>
+            <form action="/login" method="POST">
+                {{#if errorMessage}}
+                <div class="alert alert-danger text-center">
+                    <strong>Error:</strong> {{errorMessage}}
+                </div>
+                {{/if}}
+                <div class="mb-3">
+                    <label for="userName" class="form-label">User Name</label>
+                    <input type="text" id="userName" name="userName" class="form-control" placeholder="Enter your username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+        </div>
+    </div>
+</div>

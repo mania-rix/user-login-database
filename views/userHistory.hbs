@@ -1,0 +1,35 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="text-center mt-4">
+    <h1 class="fw-bold mb-0">{{session.user.userName}}</h1> 
+    <h5 class="text-muted mt-2">({{session.user.email}})</h5> 
+    <h3 class="fw-bold mt-3">History</h3> 
+</div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            {{#if session.user.loginHistory.length}}
+            <table class="table table-bordered table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>Login Date/Time</th>
+                        <th>Client Information</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each session.user.loginHistory}}
+                    <tr>
+                        <td>{{this.dateTime}}</td>
+                        <td>
+                            <small>{{this.userAgent}}</small>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            {{else}}
+            <p class="text-center text-muted">No login history available.</p>
+            {{/if}}
+        </div>
+    </div>
+</div>

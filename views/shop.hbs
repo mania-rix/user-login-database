@@ -1,0 +1,67 @@
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Main Product Display -->
+        <section class="col-md-8">
+            {{#if data.item}}
+            <div class="product-card">
+                <h2 class="product-title">{{data.item.title}}</h2>
+                {{#if data.item.featureImage}}
+                <img src="{{data.item.featureImage}}" alt="{{data.item.title}}" class="product-image img-fluid">
+                {{else}}
+                <p><em>No image available.</em></p>
+                {{/if}}
+                <div class="product-details mt-3">
+                    {{#if data.item.description}}
+                    <p>{{data.item.description}}</p>
+
+                    {{/if}}
+                    <p><strong>Price:</strong> ${{data.item.price}}</p>
+                    <p><strong>Category:</strong> {{data.item.categoryName}}</p>
+                    <p><strong>Last Updated:</strong> {{data.item.updatedAt}}</p>
+                </div>
+            </div>
+            {{else}}
+            <div class="text-center">
+                <h2>No Item Found</h2>
+                <p>Please try another item or category.</p>
+            </div>
+            {{/if}}
+        </section>
+
+        <!-- Sidebar for Items and Categories -->
+        <aside class="col-md-4">
+            <!-- Items List -->
+            {{#if data.items}}
+            <div class="sidebar-section">
+                <h4>Items</h4>
+                <ul class="list-group">
+                    {{#each data.items}}
+                    <li class="list-group-item">
+                        <a href="/shop/{{this.id}}">{{this.title}}</a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            {{else}}
+            <div class="alert alert-warning mt-3">No other items available.</div>
+            {{/if}}
+
+            <!-- Categories List -->
+            {{#if data.categories}}
+            <div class="sidebar-section mt-4">
+                <h4>Categories</h4>
+                <ul class="list-group">
+                    {{#each data.categories}}
+                    <li class="list-group-item">
+                        <a href="/shop?category={{this.id}}">{{this.category}}</a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            {{else}}
+            <div class="alert alert-warning mt-3">No categories available.</div>
+            {{/if}}
+        </aside>
+    </div>
+</div>
